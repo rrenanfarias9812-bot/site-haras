@@ -697,7 +697,8 @@ function Ingressos() {
                 ))}
               </ul>
               <a
-                href="https://www.suasenha.com.br/"
+                href="#ingressos"
+                onClick={(e) => e.preventDefault()}
                 className={`mt-7 rounded-full px-5 py-3 text-[11px] text-center inline-block relative z-20 ${
                   t.featured ? "btn-gold" : "btn-ghost-gold"
                 }`}
