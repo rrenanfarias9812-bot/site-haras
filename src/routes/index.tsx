@@ -55,8 +55,8 @@ export const Route = createFileRoute("/")({
 
 /* ============ HEADER ============ */
 const NAV = [
-  { label: "InÃ­cio", href: "#inicio" },
-  { label: "Ingressos", href: "#ingressos" },
+  { label: "Início", href: "#inicio" },
+  { label: "Ingressos", href: null },
   { label: "Fotos", href: "/fotos" },
   { label: "Patrocinadores", href: "#patrocinadores" },
 ];
@@ -92,7 +92,14 @@ function Header() {
         </a>
 
         <nav className="hidden xl:flex items-center gap-7">
-          {NAV.map((n) => (
+          {NAV.map((n) => n.href === null ? (
+            <span
+              key={n.label}
+              className="text-[12px] font-semibold uppercase tracking-[0.18em] text-foreground/80 cursor-default select-none"
+            >
+              {n.label}
+            </span>
+          ) : (
             <a
               key={n.href}
               href={n.href}
@@ -131,7 +138,14 @@ function Header() {
       {open && (
         <div className="xl:hidden mx-5 mt-3 glass-panel rounded-2xl p-5">
           <div className="flex flex-col gap-3">
-            {NAV.map((n) => (
+            {NAV.map((n) => n.href === null ? (
+              <span
+                key={n.label}
+                className="text-sm font-semibold uppercase tracking-[0.18em] text-foreground/60 cursor-default select-none"
+              >
+                {n.label}
+              </span>
+            ) : (
               <a
                 key={n.href}
                 href={n.href}
