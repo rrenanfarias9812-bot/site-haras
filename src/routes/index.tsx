@@ -56,7 +56,7 @@ export const Route = createFileRoute("/")({
 /* ============ HEADER ============ */
 const NAV = [
   { label: "Início", href: "#inicio" },
-  { label: "Ingressos", href: "https://www.suasenha.com.br/" },
+  { label: "Ingressos", href: "#ingressos" },
   { label: "Fotos", href: "/fotos" },
   { label: "Patrocinadores", href: "#patrocinadores" },
 ];
