@@ -1305,14 +1305,18 @@ function Footer() {
             <div className="text-[10px] uppercase tracking-[0.3em] text-primary">Links RÃ¡pidos</div>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               {NAV.map((n) => (
-                <li key={n.href}>
-                  <a 
-                    href={n.href} 
-                    className="hover:text-foreground"
-                    {...(n.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  >
-                    {n.label}
-                  </a>
+                <li key={n.label}>
+                  {n.href === null ? (
+                    <span className="cursor-default select-none">{n.label}</span>
+                  ) : (
+                    <a
+                      href={n.href}
+                      className="hover:text-foreground"
+                      {...(n.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    >
+                      {n.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
