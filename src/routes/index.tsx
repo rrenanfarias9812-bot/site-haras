@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState, useRef } from "react";
 import heroAsset from "@/assets/vaquejada-hero.png.asset.json";
 import arenaImg from "@/assets/arena.jpg";
@@ -9,17 +9,17 @@ import crowdImg from "@/assets/crowd.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Haras Canindezinho — Grande Vaquejada 2026 | Caucaia-CE" },
+      { title: "Haras Canindezinho â€” Grande Vaquejada 2026 | Caucaia-CE" },
       {
         name: "description",
         content:
-          "De 09 a 13 de setembro de 2026, a Arena Canindezinho recebe um dos maiores eventos de vaquejada da região. +R$ 200 mil em prêmios. Garanta seu ingresso.",
+          "De 09 a 13 de setembro de 2026, a Arena Canindezinho recebe um dos maiores eventos de vaquejada da regiÃ£o. +R$ 200 mil em prÃªmios. Garanta seu ingresso.",
       },
       { property: "og:title", content: "Grande Vaquejada Haras Canindezinho 2026" },
       {
         property: "og:description",
         content:
-          "5 dias de vaquejada, tradição e emoção na Arena Canindezinho — Caucaia-CE. +R$ 200 mil em prêmios.",
+          "5 dias de vaquejada, tradiÃ§Ã£o e emoÃ§Ã£o na Arena Canindezinho â€” Caucaia-CE. +R$ 200 mil em prÃªmios.",
       },
       { property: "og:image", content: heroAsset.url },
       { property: "og:url", content: "/" },
@@ -39,12 +39,12 @@ export const Route = createFileRoute("/")({
           eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
           location: {
             "@type": "Place",
-            name: "Arena Canindezinho — Haras Canindezinho",
+            name: "Arena Canindezinho â€” Haras Canindezinho",
             address: { "@type": "PostalAddress", addressLocality: "Caucaia", addressRegion: "CE", addressCountry: "BR" },
           },
           image: [heroAsset.url],
           description:
-            "Um dos maiores eventos de vaquejada da região, com +R$ 200 mil em prêmios.",
+            "Um dos maiores eventos de vaquejada da regiÃ£o, com +R$ 200 mil em prÃªmios.",
           organizer: { "@type": "Organization", name: "Haras Canindezinho" },
         }),
       },
@@ -55,7 +55,7 @@ export const Route = createFileRoute("/")({
 
 /* ============ HEADER ============ */
 const NAV = [
-  { label: "Início", href: "#inicio" },
+  { label: "InÃ­cio", href: "#inicio" },
   { label: "Ingressos", href: "#ingressos" },
   { label: "Fotos", href: "/fotos" },
   { label: "Patrocinadores", href: "#patrocinadores" },
@@ -86,7 +86,7 @@ function Header() {
               HARAS <span className="text-gradient-gold">CANINDEZINHO</span>
             </div>
             <div className="text-[10px] uppercase tracking-[0.32em] text-muted-foreground">
-              Caucaia · Ceará
+              Caucaia Â· CearÃ¡
             </div>
           </div>
         </a>
@@ -110,7 +110,7 @@ function Header() {
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.834a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" />
             </svg>
           </a>
-          <a href="https://www.suasenha.com.br/" className="btn-gold rounded-full px-6 py-2.5 text-[11px] font-bold">
+          <a href="#ingressos" onClick={(e) => e.preventDefault()} className="btn-gold rounded-full px-6 py-2.5 text-[11px] font-bold">
             COMPRE SUA SENHA
           </a>
         </div>
@@ -143,7 +143,7 @@ function Header() {
               </a>
             ))}
             <div className="mt-3 flex flex-col gap-2">
-              <a href="https://www.suasenha.com.br/" className="btn-gold rounded-full px-5 py-3 text-center text-xs font-bold">
+              <a href="#ingressos" onClick={(e) => e.preventDefault()} className="btn-gold rounded-full px-5 py-3 text-center text-xs font-bold">
                 COMPRE SUA SENHA
               </a>
               <a href="https://www.instagram.com/harascanindezinho/" className="rounded-full border border-border px-5 py-3 text-center text-xs font-bold text-foreground hover:bg-white/5 transition">
@@ -238,27 +238,27 @@ function Hero() {
             <div className="mb-6 flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.32em] text-primary">
                 <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-                Calendário Oficial · Edição 2026
+                CalendÃ¡rio Oficial Â· EdiÃ§Ã£o 2026
               </span>
               <span className="text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
-                09 — 13 Setembro · Caucaia/CE
+                09 â€” 13 Setembro Â· Caucaia/CE
               </span>
             </div>
 
             <h1 className="font-display text-4xl leading-[0.95] text-foreground sm:text-5xl md:text-7xl lg:text-[5.5rem]">
-              VEM AÍ MAIS UMA <br />
+              VEM AÃ MAIS UMA <br />
               <span className="text-gradient-gold">GRANDE VAQUEJADA.</span>
             </h1>
 
             <p className="mt-6 max-w-xl text-base text-foreground/80 sm:text-lg">
               De <strong className="text-foreground">09 a 13 de setembro de 2026</strong>, a
-              Arena Canindezinho recebe um dos maiores eventos de vaquejada da região —
-              tradição, esporte e emoção em cinco dias inesquecíveis.
+              Arena Canindezinho recebe um dos maiores eventos de vaquejada da regiÃ£o â€”
+              tradiÃ§Ã£o, esporte e emoÃ§Ã£o em cinco dias inesquecÃ­veis.
             </p>
 
             <div className="mt-8 inline-flex items-center gap-3 rounded-2xl border border-primary/30 bg-background/40 px-5 py-3 backdrop-blur">
               <span className="font-display text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                Premiação
+                PremiaÃ§Ã£o
               </span>
               <span className="font-display text-2xl sm:text-3xl font-bold text-gradient-gold">
                 + R$ 200 MIL
@@ -266,21 +266,21 @@ function Hero() {
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a href="https://www.suasenha.com.br/" className="btn-gold rounded-full px-7 py-4 text-xs font-bold relative z-20">
+              <a href="#ingressos" onClick={(e) => e.preventDefault()} className="btn-gold rounded-full px-7 py-4 text-xs font-bold relative z-20">
                 COMPRE SUA SENHA
               </a>
               <a
                 href="#calendario"
                 className="rounded-full px-6 py-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground/80 transition hover:text-primary"
               >
-                Ver Calendário →
+                Ver CalendÃ¡rio â†’
               </a>
             </div>
 
             <div className="mt-10 flex flex-wrap gap-6 text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
-              <span>★ Haras Canindezinho</span>
-              <span>★ Caucaia · CE</span>
-              <span>★ Arena Canindezinho</span>
+              <span>â˜… Haras Canindezinho</span>
+              <span>â˜… Caucaia Â· CE</span>
+              <span>â˜… Arena Canindezinho</span>
             </div>
           </div>
 
@@ -309,7 +309,7 @@ function Hero() {
               <div className="mt-6 grid grid-cols-3 gap-3 text-center">
                 <div className="rounded-xl bg-background/40 p-3 ring-1 ring-border">
                   <div className="text-[9px] uppercase tracking-[0.25em] text-muted-foreground">
-                    Início
+                    InÃ­cio
                   </div>
                   <div className="mt-1 font-display text-base text-foreground">09 Set</div>
                 </div>
@@ -334,11 +334,11 @@ function Hero() {
       {/* bottom marquee */}
       <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-border/50 bg-background/60 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 overflow-hidden px-5 py-3 text-[10px] uppercase tracking-[0.32em] text-muted-foreground lg:px-10">
-          <span>★ Vaquejada Premium</span>
-          <span className="hidden sm:inline">★ Cultura Nordestina</span>
-          <span>★ +R$ 200 Mil em Prêmios</span>
-          <span className="hidden md:inline">★ Arena Oficial</span>
-          <span className="hidden lg:inline">★ Calendário 2026</span>
+          <span>â˜… Vaquejada Premium</span>
+          <span className="hidden sm:inline">â˜… Cultura Nordestina</span>
+          <span>â˜… +R$ 200 Mil em PrÃªmios</span>
+          <span className="hidden md:inline">â˜… Arena Oficial</span>
+          <span className="hidden lg:inline">â˜… CalendÃ¡rio 2026</span>
         </div>
       </div>
     </section>
@@ -380,8 +380,8 @@ function VideoPromocional({ hasEntered }: { hasEntered?: boolean }) {
     }
   };
 
-  // O som inicial agora é disparado globalmente no Index (clique do WelcomeOverlay)
-  // para evitar bloqueios assíncronos do navegador.
+  // O som inicial agora Ã© disparado globalmente no Index (clique do WelcomeOverlay)
+  // para evitar bloqueios assÃ­ncronos do navegador.
 
   return (
     <section id="video-oficial" className="relative py-24 sm:py-32 px-5 lg:px-10 overflow-hidden bg-background">
@@ -396,7 +396,7 @@ function VideoPromocional({ hasEntered }: { hasEntered?: boolean }) {
           className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-foreground transition hover:bg-primary/30"
           title={isMuted ? "Ligar som" : "Desligar som"}
         >
-          {isMuted || volume === 0 ? "🔇" : "🔊"}
+          {isMuted || volume === 0 ? "ðŸ”‡" : "ðŸ”Š"}
         </button>
         <input 
           type="range" 
@@ -420,11 +420,11 @@ function VideoPromocional({ hasEntered }: { hasEntered?: boolean }) {
 
       <div className="mx-auto max-w-7xl">
         <SectionHead
-          eyebrow="Vídeo Oficial"
+          eyebrow="VÃ­deo Oficial"
           align="center"
           title={
             <>
-              VIVA A <span className="text-gradient-gold">EXPERIÊNCIA</span>
+              VIVA A <span className="text-gradient-gold">EXPERIÃŠNCIA</span>
             </>
           }
         />
@@ -449,9 +449,9 @@ function VideoPromocional({ hasEntered }: { hasEntered?: boolean }) {
 function Evento() {
   const cards = [
     { n: "05", l: "Dias de Evento", d: "De 09 a 13 de setembro de 2026" },
-    { n: "200K+", l: "Em Premiação", d: "Mais de R$ 200 mil distribuídos" },
-    { n: "01", l: "Arena Oficial", d: "Arena Canindezinho · Caucaia/CE" },
-    { n: "∞", l: "Tradição", d: "Cultura nordestina e família" },
+    { n: "200K+", l: "Em PremiaÃ§Ã£o", d: "Mais de R$ 200 mil distribuÃ­dos" },
+    { n: "01", l: "Arena Oficial", d: "Arena Canindezinho Â· Caucaia/CE" },
+    { n: "âˆž", l: "TradiÃ§Ã£o", d: "Cultura nordestina e famÃ­lia" },
   ];
   return (
     <section id="evento" className="relative py-24 sm:py-32 px-5 lg:px-10">
@@ -466,14 +466,14 @@ function Evento() {
                   <span className="text-gradient-gold">HARAS CANINDEZINHO</span> 2026
                 </>
               }
-              subtitle="Uma experiência completa de competição, esporte e tradição. Cinco dias que reúnem famílias, vaqueiros e apaixonados pela cultura nordestina em uma das maiores arenas da região."
+              subtitle="Uma experiÃªncia completa de competiÃ§Ã£o, esporte e tradiÃ§Ã£o. Cinco dias que reÃºnem famÃ­lias, vaqueiros e apaixonados pela cultura nordestina em uma das maiores arenas da regiÃ£o."
             />
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="https://www.suasenha.com.br/" className="btn-gold rounded-full px-6 py-3 text-xs relative z-20">
-                Garantir presença
+              <a href="#ingressos" onClick={(e) => e.preventDefault()} className="btn-gold rounded-full px-6 py-3 text-xs relative z-20">
+                Garantir presenÃ§a
               </a>
               <a href="#calendario" className="btn-ghost-gold rounded-full px-6 py-3 text-xs">
-                Programação
+                ProgramaÃ§Ã£o
               </a>
             </div>
           </div>
@@ -499,9 +499,9 @@ function Evento() {
 
         <div className="mt-20 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { t: "Competição", d: "Provas das principais categorias com vaqueiros de alto nível." },
-            { t: "Música & Festa", d: "Atrações regionais, forró e shows todas as noites do evento." },
-            { t: "Família", d: "Estrutura completa, segurança e experiência para todas as idades." },
+            { t: "CompetiÃ§Ã£o", d: "Provas das principais categorias com vaqueiros de alto nÃ­vel." },
+            { t: "MÃºsica & Festa", d: "AtraÃ§Ãµes regionais, forrÃ³ e shows todas as noites do evento." },
+            { t: "FamÃ­lia", d: "Estrutura completa, seguranÃ§a e experiÃªncia para todas as idades." },
           ].map((b) => (
             <div
               key={b.t}
@@ -523,31 +523,31 @@ const CAL = [
     d: "09",
     weekday: "Quarta",
     title: "Abertura Oficial",
-    items: ["19h — Cerimônia de Abertura", "20h — Apresentações", "22h — Show de Abertura"],
+    items: ["19h â€” CerimÃ´nia de Abertura", "20h â€” ApresentaÃ§Ãµes", "22h â€” Show de Abertura"],
   },
   {
     d: "10",
     weekday: "Quinta",
-    title: "Eliminatórias I",
-    items: ["16h — Provas Iniciantes", "19h — Eliminatórias", "22h — Forró Pé de Serra"],
+    title: "EliminatÃ³rias I",
+    items: ["16h â€” Provas Iniciantes", "19h â€” EliminatÃ³rias", "22h â€” ForrÃ³ PÃ© de Serra"],
   },
   {
     d: "11",
     weekday: "Sexta",
-    title: "Eliminatórias II",
-    items: ["16h — Categoria Aspirante", "19h — Categoria Profissional", "23h — Show Nacional"],
+    title: "EliminatÃ³rias II",
+    items: ["16h â€” Categoria Aspirante", "19h â€” Categoria Profissional", "23h â€” Show Nacional"],
   },
   {
     d: "12",
-    weekday: "Sábado",
+    weekday: "SÃ¡bado",
     title: "Semifinais",
-    items: ["15h — Semifinais", "20h — Apresentação Premium", "23h — Show Principal"],
+    items: ["15h â€” Semifinais", "20h â€” ApresentaÃ§Ã£o Premium", "23h â€” Show Principal"],
   },
   {
     d: "13",
     weekday: "Domingo",
     title: "Grande Final",
-    items: ["14h — Grande Final", "19h — Premiação Oficial", "22h — Encerramento"],
+    items: ["14h â€” Grande Final", "19h â€” PremiaÃ§Ã£o Oficial", "22h â€” Encerramento"],
   },
 ];
 
@@ -557,17 +557,17 @@ function Calendario() {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-wrap items-end justify-between gap-8">
           <SectionHead
-            eyebrow="Calendário Oficial"
+            eyebrow="CalendÃ¡rio Oficial"
             title={
               <>
                 CINCO DIAS <br />
-                <span className="text-gradient-gold">DE EMOÇÃO</span>
+                <span className="text-gradient-gold">DE EMOÃ‡ÃƒO</span>
               </>
             }
-            subtitle="Programação oficial da Grande Vaquejada Haras Canindezinho 2026."
+            subtitle="ProgramaÃ§Ã£o oficial da Grande Vaquejada Haras Canindezinho 2026."
           />
           <div className="hidden lg:block text-right">
-            <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Edição</div>
+            <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">EdiÃ§Ã£o</div>
             <div className="font-display text-5xl font-bold text-gradient-gold">2026</div>
           </div>
         </div>
@@ -584,7 +584,7 @@ function Calendario() {
                     {day.d}
                   </div>
                   <div className="mt-1 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                    Setembro · {day.weekday}
+                    Setembro Â· {day.weekday}
                   </div>
                 </div>
                 <span className="rounded-full border border-primary/40 px-2.5 py-1 text-[9px] uppercase tracking-[0.25em] text-primary">
@@ -601,7 +601,7 @@ function Calendario() {
                 ))}
               </ul>
               <button className="mt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary transition hover:text-foreground">
-                Ver programação →
+                Ver programaÃ§Ã£o â†’
               </button>
             </div>
           ))}
@@ -617,7 +617,7 @@ const TICKETS = [
     name: "Ingresso Individual",
     price: "R$ 60",
     p: "por dia",
-    perks: ["Acesso a 1 dia de evento", "Arquibancada geral", "Pulseira de identificação"],
+    perks: ["Acesso a 1 dia de evento", "Arquibancada geral", "Pulseira de identificaÃ§Ã£o"],
     cta: "Comprar",
   },
   {
@@ -629,17 +629,17 @@ const TICKETS = [
     badge: "Mais escolhido",
   },
   {
-    name: "Área VIP",
+    name: "Ãrea VIP",
     price: "R$ 480",
     p: "5 dias",
-    perks: ["Acesso VIP aos 5 dias", "Visão privilegiada da arena", "Welcome drink incluso"],
+    perks: ["Acesso VIP aos 5 dias", "VisÃ£o privilegiada da arena", "Welcome drink incluso"],
     cta: "Comprar",
     featured: true,
   },
   {
     name: "Camarote Premium",
     price: "Sob consulta",
-    p: "experiência completa",
+    p: "experiÃªncia completa",
     perks: ["Camarote exclusivo", "Open food & drink", "Estacionamento privativo"],
     cta: "Quero meu camarote",
   },
@@ -655,10 +655,10 @@ function Ingressos() {
           title={
             <>
               VIVA DE PERTO <br />
-              <span className="text-gradient-gold">A EMOÇÃO DA VAQUEJADA</span>
+              <span className="text-gradient-gold">A EMOÃ‡ÃƒO DA VAQUEJADA</span>
             </>
           }
-          subtitle="Escolha a experiência ideal para você na Arena Canindezinho."
+          subtitle="Escolha a experiÃªncia ideal para vocÃª na Arena Canindezinho."
         />
 
         <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -710,7 +710,7 @@ function Ingressos() {
         </div>
 
         <p className="mt-8 text-center text-xs uppercase tracking-[0.25em] text-muted-foreground">
-          Pagamento seguro · Pix, Cartão e Boleto
+          Pagamento seguro Â· Pix, CartÃ£o e Boleto
         </p>
       </div>
     </section>
@@ -733,19 +733,19 @@ function Inscricoes() {
       <div className="mx-auto max-w-7xl grid gap-14 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <SectionHead
-            eyebrow="Inscrição de Competidores"
+            eyebrow="InscriÃ§Ã£o de Competidores"
             title={
               <>
-                PARTICIPE DE UMA DAS <span className="text-gradient-gold">MAIORES VAQUEJADAS</span> DA REGIÃO
+                PARTICIPE DE UMA DAS <span className="text-gradient-gold">MAIORES VAQUEJADAS</span> DA REGIÃƒO
               </>
             }
-            subtitle="Inscreva-se nas categorias oficiais e dispute mais de R$ 200 mil em prêmios na Arena Canindezinho."
+            subtitle="Inscreva-se nas categorias oficiais e dispute mais de R$ 200 mil em prÃªmios na Arena Canindezinho."
           />
           <div className="mt-8 space-y-4">
             {[
-              { t: "Categorias Oficiais", d: "Aspirante · Iniciante · Amador · Profissional · Master" },
-              { t: "Premiação Garantida", d: "Mais de R$ 200 mil distribuídos entre as categorias" },
-              { t: "Atendimento Direto", d: "Fale com a organização via WhatsApp para tirar dúvidas" },
+              { t: "Categorias Oficiais", d: "Aspirante Â· Iniciante Â· Amador Â· Profissional Â· Master" },
+              { t: "PremiaÃ§Ã£o Garantida", d: "Mais de R$ 200 mil distribuÃ­dos entre as categorias" },
+              { t: "Atendimento Direto", d: "Fale com a organizaÃ§Ã£o via WhatsApp para tirar dÃºvidas" },
             ].map((b) => (
               <div key={b.t} className="rounded-2xl border border-border bg-card/60 p-5 backdrop-blur">
                 <div className="font-display text-lg text-foreground">{b.t}</div>
@@ -756,7 +756,7 @@ function Inscricoes() {
               href="https://wa.me/5585997832737"
               className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary hover:text-foreground"
             >
-              Falar com a organização →
+              Falar com a organizaÃ§Ã£o â†’
             </a>
           </div>
         </div>
@@ -785,20 +785,20 @@ function Inscricoes() {
             </div>
             <div className="mt-4">
               <label className="mb-2 block text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
-                Observações
+                ObservaÃ§Ãµes
               </label>
               <textarea
                 rows={4}
                 className="w-full rounded-xl border border-border bg-background/40 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-primary focus:outline-none"
-                placeholder="Conte algo importante para a organização"
+                placeholder="Conte algo importante para a organizaÃ§Ã£o"
               />
             </div>
             <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
               <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-                Vagas limitadas · Inscrições oficiais
+                Vagas limitadas Â· InscriÃ§Ãµes oficiais
               </p>
               <button type="submit" className="btn-gold rounded-full px-7 py-3.5 text-xs">
-                {sent ? "Inscrição enviada ✓" : "Enviar Inscrição"}
+                {sent ? "InscriÃ§Ã£o enviada âœ“" : "Enviar InscriÃ§Ã£o"}
               </button>
             </div>
           </form>
@@ -848,12 +848,12 @@ const PACKS = [
   {
     name: "Bronze",
     price: "R$ 5.000",
-    perks: ["Marca no telão", "Citação na locução", "Logo no site oficial"],
+    perks: ["Marca no telÃ£o", "CitaÃ§Ã£o na locuÃ§Ã£o", "Logo no site oficial"],
   },
   {
     name: "Prata",
     price: "R$ 15.000",
-    perks: ["Marca em arena", "Material oficial", "Posts nas redes", "Locução premium"],
+    perks: ["Marca em arena", "Material oficial", "Posts nas redes", "LocuÃ§Ã£o premium"],
   },
   {
     name: "Ouro",
@@ -873,7 +873,7 @@ const PACKS = [
       "Naming rights",
       "Marca em todos materiais",
       "Camarote master",
-      "Ações exclusivas",
+      "AÃ§Ãµes exclusivas",
     ],
   },
 ];
@@ -888,20 +888,20 @@ function Patrocinadores() {
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <SectionHead
-              eyebrow="Patrocínio"
+              eyebrow="PatrocÃ­nio"
               title={
                 <>
                   SEJA UM <span className="text-gradient-gold">PATROCINADOR OFICIAL</span>
                 </>
               }
-              subtitle="Associe sua marca a um dos maiores eventos de vaquejada da região e esteja presente diante de um público apaixonado por esporte, tradição e cultura nordestina."
+              subtitle="Associe sua marca a um dos maiores eventos de vaquejada da regiÃ£o e esteja presente diante de um pÃºblico apaixonado por esporte, tradiÃ§Ã£o e cultura nordestina."
             />
             <div className="mt-8 grid grid-cols-2 gap-3">
               {[
-                ["+50k", "Público presencial"],
+                ["+50k", "PÃºblico presencial"],
                 ["+1M", "Alcance digital"],
-                ["5", "Dias de exposição"],
-                ["100%", "Cobertura mídia"],
+                ["5", "Dias de exposiÃ§Ã£o"],
+                ["100%", "Cobertura mÃ­dia"],
               ].map(([n, l]) => (
                 <div key={l} className="rounded-2xl border border-border bg-card p-5">
                   <div className="font-display text-3xl text-gradient-gold">{n}</div>
@@ -955,7 +955,7 @@ function Patrocinadores() {
 }
 
 /* ============ GALERIA ============ */
-const GAL_TABS = ["Vaquejada", "Arena", "Bastidores", "Público", "Campeões", "Patrocinadores"];
+const GAL_TABS = ["Vaquejada", "Arena", "Bastidores", "PÃºblico", "CampeÃµes", "Patrocinadores"];
 
 function Galeria() {
   const [tab, setTab] = useState(GAL_TABS[0]);
@@ -968,7 +968,7 @@ function Galeria() {
             eyebrow="Galeria"
             title={
               <>
-                MOMENTOS DE <span className="text-gradient-gold">EMOÇÃO E TRADIÇÃO</span>
+                MOMENTOS DE <span className="text-gradient-gold">EMOÃ‡ÃƒO E TRADIÃ‡ÃƒO</span>
               </>
             }
           />
@@ -1028,29 +1028,29 @@ const NEWS = [
   {
     img: heroAsset.url,
     cat: "Oficial",
-    t: "Lançamento oficial da Vaquejada 2026",
-    r: "Haras Canindezinho anuncia datas, premiação e estrutura da edição 2026.",
+    t: "LanÃ§amento oficial da Vaquejada 2026",
+    r: "Haras Canindezinho anuncia datas, premiaÃ§Ã£o e estrutura da ediÃ§Ã£o 2026.",
     date: "01 Mar 2026",
   },
   {
     img: arenaImg,
-    cat: "Premiação",
-    t: "Premiação ultrapassa R$ 200 mil",
-    r: "Edição 2026 traz a maior premiação da história do evento.",
+    cat: "PremiaÃ§Ã£o",
+    t: "PremiaÃ§Ã£o ultrapassa R$ 200 mil",
+    r: "EdiÃ§Ã£o 2026 traz a maior premiaÃ§Ã£o da histÃ³ria do evento.",
     date: "15 Mar 2026",
   },
   {
     img: actionImg,
     cat: "Arena",
     t: "Arena Canindezinho se prepara para grande evento",
-    r: "Estrutura ganha reforço para receber milhares de visitantes.",
+    r: "Estrutura ganha reforÃ§o para receber milhares de visitantes.",
     date: "02 Abr 2026",
   },
   {
     img: crowdImg,
-    cat: "Inscrições",
-    t: "Inscrições abertas para competidores",
-    r: "Vaqueiros já podem garantir vaga nas categorias oficiais.",
+    cat: "InscriÃ§Ãµes",
+    t: "InscriÃ§Ãµes abertas para competidores",
+    r: "Vaqueiros jÃ¡ podem garantir vaga nas categorias oficiais.",
     date: "20 Abr 2026",
   },
 ];
@@ -1060,10 +1060,10 @@ function Noticias() {
     <section id="noticias" className="py-24 sm:py-32 px-5 lg:px-10 bg-gradient-to-b from-background via-card/30 to-background">
       <div className="mx-auto max-w-7xl">
         <SectionHead
-          eyebrow="Notícias"
+          eyebrow="NotÃ­cias"
           title={
             <>
-              NOTÍCIAS DO <span className="text-gradient-gold">HARAS CANINDEZINHO</span>
+              NOTÃCIAS DO <span className="text-gradient-gold">HARAS CANINDEZINHO</span>
             </>
           }
         />
@@ -1091,7 +1091,7 @@ function Noticias() {
                 <h3 className="mt-2 font-display text-xl leading-tight text-foreground">{n.t}</h3>
                 <p className="mt-2 flex-1 text-sm text-muted-foreground">{n.r}</p>
                 <button className="mt-4 text-left text-[11px] font-semibold uppercase tracking-[0.2em] text-primary hover:text-foreground">
-                  Ler mais →
+                  Ler mais â†’
                 </button>
               </div>
             </article>
@@ -1104,10 +1104,10 @@ function Noticias() {
 
 /* ============ ESTRUTURA ============ */
 const STRUCT = [
-  { t: "Arena Central", d: "Pista profissional, iluminação cinematográfica e som de alta qualidade.", img: arenaImg },
+  { t: "Arena Central", d: "Pista profissional, iluminaÃ§Ã£o cinematogrÃ¡fica e som de alta qualidade.", img: arenaImg },
   { t: "Estacionamento", d: "Amplo, monitorado e com acesso facilitado para todos os dias do evento.", img: crowdImg },
-  { t: "Camarotes Premium", d: "Áreas exclusivas com vista privilegiada, food & drink incluso.", img: vaqueiroImg },
-  { t: "Área dos Competidores", d: "Estrutura completa de suporte para vaqueiros, equipes e cavalos.", img: actionImg },
+  { t: "Camarotes Premium", d: "Ãreas exclusivas com vista privilegiada, food & drink incluso.", img: vaqueiroImg },
+  { t: "Ãrea dos Competidores", d: "Estrutura completa de suporte para vaqueiros, equipes e cavalos.", img: actionImg },
 ];
 
 function Estrutura() {
@@ -1121,7 +1121,7 @@ function Estrutura() {
               UMA ARENA <span className="text-gradient-gold">FEITA PARA GRANDES EVENTOS</span>
             </>
           }
-          subtitle="O Haras Canindezinho oferece estrutura completa para competidores, público, patrocinadores e parceiros."
+          subtitle="O Haras Canindezinho oferece estrutura completa para competidores, pÃºblico, patrocinadores e parceiros."
         />
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           {STRUCT.map((s, i) => (
@@ -1156,22 +1156,22 @@ const TESTI = [
   {
     n: "Carlos Eduardo",
     r: "Vaqueiro Profissional",
-    q: "Uma das vaquejadas mais bem estruturadas do Nordeste. Organização nota mil.",
+    q: "Uma das vaquejadas mais bem estruturadas do Nordeste. OrganizaÃ§Ã£o nota mil.",
   },
   {
     n: "Mariana Sousa",
     r: "Visitante / Caucaia-CE",
-    q: "Trouxe minha família e foi uma experiência inesquecível. Já garantimos presença em 2026.",
+    q: "Trouxe minha famÃ­lia e foi uma experiÃªncia inesquecÃ­vel. JÃ¡ garantimos presenÃ§a em 2026.",
   },
   {
-    n: "AgroMax Patrocínios",
+    n: "AgroMax PatrocÃ­nios",
     r: "Patrocinador Master",
-    q: "Retorno de marca surpreendente. Público engajado e cobertura impecável.",
+    q: "Retorno de marca surpreendente. PÃºblico engajado e cobertura impecÃ¡vel.",
   },
   {
     n: "Equipe Garra Forte",
     r: "Competidores",
-    q: "Arena de primeiro nível, premiação justa e respeito pelos atletas.",
+    q: "Arena de primeiro nÃ­vel, premiaÃ§Ã£o justa e respeito pelos atletas.",
   },
 ];
 
@@ -1193,7 +1193,7 @@ function Depoimentos() {
             <div key={t.n} className="rounded-2xl border border-border bg-card p-6">
               <div className="flex gap-1 text-primary">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <span key={i}>★</span>
+                  <span key={i}>â˜…</span>
                 ))}
               </div>
               <p className="mt-4 text-sm leading-relaxed text-foreground/90">"{t.q}"</p>
@@ -1226,16 +1226,16 @@ function CTAFinal() {
         <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
       </div>
       <div className="mx-auto max-w-5xl text-center">
-        <span className="section-label justify-center">Edição Oficial 2026</span>
+        <span className="section-label justify-center">EdiÃ§Ã£o Oficial 2026</span>
         <h2 className="mt-6 font-display text-4xl sm:text-6xl lg:text-7xl leading-[0.95] text-foreground">
           PREPARE-SE PARA VIVER <br />
-          <span className="text-gradient-gold">A EMOÇÃO DA VAQUEJADA</span>
+          <span className="text-gradient-gold">A EMOÃ‡ÃƒO DA VAQUEJADA</span>
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg">
-          De 09 a 13 de setembro de 2026 · Haras Canindezinho · Caucaia-CE
+          De 09 a 13 de setembro de 2026 Â· Haras Canindezinho Â· Caucaia-CE
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4 relative z-20">
-          <a href="https://www.suasenha.com.br/" className="btn-gold rounded-full px-7 py-4 text-xs font-bold">
+          <a href="#ingressos" onClick={(e) => e.preventDefault()} className="btn-gold rounded-full px-7 py-4 text-xs font-bold">
             COMPRE SUA SENHA
           </a>
           <a href="#patrocinadores" className="rounded-full border border-border px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground/80 hover:text-primary">
@@ -1261,13 +1261,13 @@ function Footer() {
               <div>
                 <div className="font-display text-lg text-foreground">HARAS CANINDEZINHO</div>
                 <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                  Arena Canindezinho · Caucaia-CE
+                  Arena Canindezinho Â· Caucaia-CE
                 </div>
               </div>
             </div>
             <p className="mt-5 max-w-md text-sm text-muted-foreground">
-              Um dos maiores eventos de vaquejada da região. Tradição, esporte e cultura
-              nordestina em uma experiência premium.
+              Um dos maiores eventos de vaquejada da regiÃ£o. TradiÃ§Ã£o, esporte e cultura
+              nordestina em uma experiÃªncia premium.
             </p>
             <div className="mt-6 flex gap-3">
               {[
@@ -1288,7 +1288,7 @@ function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <div className="text-[10px] uppercase tracking-[0.3em] text-primary">Links Rápidos</div>
+            <div className="text-[10px] uppercase tracking-[0.3em] text-primary">Links RÃ¡pidos</div>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               {NAV.map((n) => (
                 <li key={n.href}>
@@ -1307,7 +1307,7 @@ function Footer() {
           <div className="lg:col-span-4">
             <div className="text-[10px] uppercase tracking-[0.3em] text-primary">Contato</div>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li>Arena Canindezinho — Caucaia, Ceará</li>
+              <li>Arena Canindezinho â€” Caucaia, CearÃ¡</li>
               <li>WhatsApp: +55 (85) 99783-2737</li>
               <li>contato@harascanindezinho.com.br</li>
               <li className="text-foreground">Evento: 09 a 13 de Setembro de 2026</li>
@@ -1323,10 +1323,10 @@ function Footer() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-border pt-6 sm:flex-row sm:items-center">
           <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            © {new Date().getFullYear()} Haras Canindezinho · Todos os direitos reservados
+            Â© {new Date().getFullYear()} Haras Canindezinho Â· Todos os direitos reservados
           </div>
           <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            Calendário Oficial · Edição 2026
+            CalendÃ¡rio Oficial Â· EdiÃ§Ã£o 2026
           </div>
         </div>
       </div>
@@ -1370,7 +1370,7 @@ function WelcomeOverlay({ onEnter }: { onEnter: () => void }) {
           onClick={onEnter}
           className="mt-4 rounded-full btn-gold px-8 py-4 text-sm font-bold uppercase tracking-[0.2em] shadow-[0_0_20px_rgba(212,175,55,0.4)] transition hover:scale-105"
         >
-          Viver a Experiência
+          Viver a ExperiÃªncia
         </button>
       </div>
     </div>
@@ -1392,7 +1392,7 @@ function Index() {
         <WelcomeOverlay onEnter={() => {
           setHasEntered(true);
           
-          // Dispara o áudio imediatamente no momento do clique (síncrono)
+          // Dispara o Ã¡udio imediatamente no momento do clique (sÃ­ncrono)
           const iframe = document.querySelector('iframe');
           if (iframe && iframe.contentWindow) {
               iframe.contentWindow.postMessage({ action: 'play' }, '*');
@@ -1419,3 +1419,4 @@ function Index() {
     </div>
   );
 }
+
